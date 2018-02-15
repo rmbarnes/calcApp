@@ -7,7 +7,32 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" RenderTransformOrigin="0.466,0.504" Height="640" VerticalAlignment="Top" AllowDrop="False" Margin="-1,0,1,0">
+        <ScrollBar HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <ScrollBar HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtWidth" HorizontalAlignment="Left" Text="" VerticalAlignment="Top" Margin="431,85,0,0" Width="184" TextChanged="txtWidth_TextChanged" PlaceholderText="Enter width"/>
+        <TextBox x:Name="txtHeight" HorizontalAlignment="Left" Text="" VerticalAlignment="Top" Margin="431,137,0,0" Width="184" PlaceholderText="Enter height" TextChanged="txtHeight_TextChanged"/>
+        <TextBlock HorizontalAlignment="Left" Text="Glazer Calculator" TextWrapping="Wrap" VerticalAlignment="Top" Margin="445,40,0,0" FontSize="20"/>
+        <Button x:Name="btnSubmit" Content="Calculate" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="478,345,0,0" Click="btnSubmit_Click"/>
+        <TextBox x:Name="txtWoodLength" HorizontalAlignment="Left" Text="" VerticalAlignment="Top" Margin="727,449,0,0" Visibility="Collapsed" IsReadOnly="True" PlaceholderText="Wood Length"/>
+        <TextBox x:Name="txtGlassArea" HorizontalAlignment="Left" Text="" VerticalAlignment="Top" Margin="727,508,0,0" Width="110" Visibility="Collapsed" IsReadOnly="True" PlaceholderText="Glass Area"/>
+        <TextBlock HorizontalAlignment="Left" Height="26" Margin="581,451,0,0" Text="Wood Length:" TextWrapping="Wrap" VerticalAlignment="Top" Width="96"/>
+        <TextBlock HorizontalAlignment="Left" Height="27" Margin="601,510,0,0" Text="Glass Area:" TextWrapping="Wrap" VerticalAlignment="Top" Width="76"/>
+        <TextBlock x:Name="txtWarning" HorizontalAlignment="Left" Text="Please enter valid values. Height and width must be greater than 0 and less than 40." TextWrapping="Wrap" VerticalAlignment="Top" Margin="655,85,0,0" Height="85" Width="240" Visibility="Collapsed"/>
+        <DatePicker x:Name="dateBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="399,565,0,0" RequestedTheme="Default" Visibility="Collapsed" IsEnabled="False" DayFormat="{}{day.integer}" Width="303"/>
+        <ComboBox x:Name="colorBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="430,196,0,0" Width="177" SelectionChanged="ComboBox_SelectionChanged" PlaceholderText="Select color" AllowDrop="False" IsDropDownOpen="False" IsSynchronizedWithCurrentItem="False" TabNavigation="Once">
+            <ComboBoxItem Content="Black"/>
+            <ComboBoxItem Content="Brown"/>
+            <ComboBoxItem Content="Blue"/>
+        </ComboBox>
+        <Slider x:Name="mySlider" HorizontalAlignment="Left" Height="39" Margin="430,280,0,0" VerticalAlignment="Top" Width="178" Maximum="50" ValueChanged="Slider_ValueChanged"/>
+        <TextBlock x:Name="txtQuantity" HorizontalAlignment="Left" Height="26" Margin="433,250,0,0" Text="Quantity:" TextWrapping="Wrap" VerticalAlignment="Top" Width="174"/>
+        <TextBlock HorizontalAlignment="Left" Height="32" Margin="256,571,0,0" Text="Today's Date:" TextWrapping="Wrap" VerticalAlignment="Top" Width="139"/>
+        <TextBlock x:Name="txtWidth1" HorizontalAlignment="Left" Height="22" Margin="299,451,0,0" Text="Width:" TextWrapping="Wrap" VerticalAlignment="Top" Width="48"/>
+        <TextBox x:Name="txtWidthOutput" HorizontalAlignment="Left" Height="24" Margin="400,448,0,0" Text="" VerticalAlignment="Top" Width="110" PlaceholderText="Width" IsReadOnly="True" Visibility="Collapsed"/>
+        <TextBox x:Name="txtHeightOutput" HorizontalAlignment="Left" Height="16" Margin="399,508,0,0" Text="" VerticalAlignment="Top" Width="110" IsReadOnly="True" PlaceholderText="Height" Visibility="Collapsed"/>
+        <TextBlock HorizontalAlignment="Left" Height="32" Margin="294,514,0,0" Text="Height:" TextWrapping="Wrap" VerticalAlignment="Top" Width="78"/>
+
 
     </Grid>
 </Page>
